@@ -132,65 +132,105 @@ class _expenseFormState extends State<expenseForm> {
             ),
             SizedBox(height: 16),
 
-            Row(
+            //ya se
+            Column(
               children: [
-                Expanded(
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Lodging Amount',
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: ktextColor),
-                        gapPadding: 10,
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: kPrimaryColor),
-                        gapPadding: 10,
+                Row(
+                  children: [
+                    Expanded(
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Local Travel',
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: ktextColor),
+                            gapPadding: 10,
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: kPrimaryColor),
+                            gapPadding: 10,
+                          ),
+                        ),
                       ),
                     ),
-                  ),
+                    SizedBox(width: 16),
+                    Expanded(
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Intercity Travel',
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: ktextColor),
+                            gapPadding: 10,
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: kPrimaryColor),
+                            gapPadding: 10,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-                SizedBox(width: 16),
-                Expanded(
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Meal Amount',
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: ktextColor),
-                        gapPadding: 10,
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: kPrimaryColor),
-                        gapPadding: 10,
+                SizedBox(height: 16), // Add some space between the rows
+                Row(
+                  children: [
+                    Expanded(
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Lodging Amount',
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: ktextColor),
+                            gapPadding: 10,
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: kPrimaryColor),
+                            gapPadding: 10,
+                          ),
+                        ),
                       ),
                     ),
-                  ),
+                    SizedBox(width: 16),
+                    Expanded(
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Meal Amount',
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: ktextColor),
+                            gapPadding: 10,
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: kPrimaryColor),
+                            gapPadding: 10,
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 16),
+                    Expanded(
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Other Expenses',
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: ktextColor),
+                            gapPadding: 10,
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: kPrimaryColor),
+                            gapPadding: 10,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-                SizedBox(width: 16),
-                Expanded(
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Other Expenses',
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: ktextColor),
-                        gapPadding: 10,
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: kPrimaryColor),
-                        gapPadding: 10,
-                      ),
-                    ),
-                  ),
+                SizedBox(height: 16), // Add some space between the rows
+                ElevatedButton.icon(
+                  onPressed: () {
+                    // Handle button press
+                  },
+                  icon: Icon(Icons.upload), // Icon to be displayed
+                  label: Text('Upload Screenshot'), // Text to be displayed
                 ),
               ],
-            ),
-
-            SizedBox(height: 16),
-            ElevatedButton.icon(
-              onPressed: () {
-                // Handle button press
-              },
-              icon: Icon(Icons.upload), // Icon to be displayed
-              label: Text('Upload Screenshot'), // Text to be displayed
             ),
 
           ],
