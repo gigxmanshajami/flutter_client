@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -31,13 +30,15 @@ class ExpensePreview extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Expense Preview',style: TextStyle(color: kthirdColor,fontWeight: FontWeight.bold),),
+        title: Text(
+          'Expense Preview',
+          style: TextStyle(color: kthirdColor, fontWeight: FontWeight.bold),
+        ),
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: DataTable(
-          columns:
-          <DataColumn>[
+          columns: <DataColumn>[
             DataColumn(label: Text('S.No.')),
             DataColumn(label: Text('Date')),
             DataColumn(label: Text('Location')),
@@ -46,12 +47,15 @@ class ExpensePreview extends StatelessWidget {
           rows: expenses.asMap().entries.map((entry) {
             final index = entry.key + 1;
             final expense = entry.value;
-            double totalExpenses = expense.lodgingAmount + expense.mealAmount + expense.othersAmount;
+            double totalExpenses = expense.lodgingAmount +
+                expense.mealAmount +
+                expense.othersAmount;
             return DataRow(
               selected: false,
               cells: [
                 DataCell(Text('$index')),
-                DataCell(Text('${DateFormat('dd/MM/yyyy').format(expense.date)}')),
+                DataCell(
+                    Text('${DateFormat('dd/MM/yyyy').format(expense.date)}')),
                 DataCell(Text(expense.location)),
                 DataCell(Text('\₹$totalExpenses')),
               ],
